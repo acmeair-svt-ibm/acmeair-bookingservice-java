@@ -10,6 +10,19 @@ spec:
   applicationImage: stackaa-booking 
   createKnativeService: false
   expose: true
+  env:
+  - name: USERNAME
+    value: admin
+  - name: PASSWORD
+    value: password
+  - name: MONGO_HOST
+    value: bphmongo.rtp.raleigh.ibm.com
+  - name: JVM_ARGS
+    value: "-DcustomerClient/mp-rest/url=http://stackaa-customer:9080/customer -DflightClient/mp-rest/url=http://stackaa-flight:9080/flight -Dmp.jwt.verify.publickey.location=http://stackaa-auth:9080/auth/getJwk"
+  - name: TRACK_REWARD_MILES
+    value: 'true'
+  - name: SECURE_SERVICE_CALLS
+    value: 'true'  
   service:
     type: NodePort
     port: 9080
