@@ -87,33 +87,46 @@ public class BookingServiceImpl implements BookingService, MongoConstants {
 
   @Override
   public String bookFlight(String customerId, String flightSegmentId, String flightId) {
-    if (flightSegmentId == null) {
+System.out.println("1");
+	  if (flightSegmentId == null) {
+System.out.println("2");
       return bookFlight(customerId, flightId);
     } else {
+System.out.println("3");
 
       try {
+System.out.println("4");
 
         String bookingId = keyGenerator.generate().toString();
-
+System.out.println("5");
         Document bookingDoc = new Document("_id", bookingId).append("customerId", customerId)
             .append("flightId", flightId).append("dateOfBooking", new Date())
             .append("flightSegmentId", flightSegmentId);
-
+System.out.println("6");
         Span activeSpan = configuredTracer.activeSpan();
+System.out.println("7");
         Tracer.SpanBuilder spanBuilder = configuredTracer.buildSpan("Created bookFlight Span");
+System.out.println("8");
         if (activeSpan != null) {
+System.out.println("9");
             spanBuilder.asChildOf(activeSpan.context());
         }
         
+System.out.println("10");      
         Span childSpan = spanBuilder.startManual();
+System.out.println("11");
         childSpan.setTag("Created", true);
+System.out.println("12");
         
         bookingCollection.insertOne(bookingDoc);
+System.out.println("13");
         
         childSpan.finish();
+System.out.println("14");
 
         return bookingId;
       } catch (Exception e) {
+System.out.println("15");
         throw new RuntimeException(e);
       }
 
