@@ -17,8 +17,6 @@ spec:
     value: password
   - name: MONGO_HOST
     value: bphmongob.rtp.raleigh.ibm.com
-  - name: JVM_ARGS
-    value: '"-Dmp.jwt.verify.publickey.location=http://acmeair-kabanero.apps.bph44c1.cp.fyre.ibm.com/auth/getJwk -DcustomerClient/mp-rest/url=http://acmeair-kabanero.apps.bph44c1.cp.fyre.ibm.com/customer -DflightClient/mp-rest/url=http://acmeair-kabanero.apps.bph44c1.cp.fyre.ibm.com/flight"'
   - name: TRACK_REWARD_MILES
     value: 'true'
   - name: SECURE_SERVICE_CALLS
