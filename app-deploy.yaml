@@ -22,7 +22,7 @@ spec:
   - name: TRACK_REWARD_MILES
     value: 'true'
   - name: SECURE_SERVICE_CALLS
-    value: 'true'  
+    value: 'false'  
   service:
     type: NodePort
     port: 9080
