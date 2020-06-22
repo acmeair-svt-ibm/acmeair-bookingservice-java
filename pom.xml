@@ -89,7 +89,7 @@
                      <param>-Xdump:heap</param>
                      <param>-Xaggressive</param>
                      <param>-Xverbosegclog:/logs/verbosegc.log</param>
-                     <param>-DmyOL=3</param>  
+                     <param>-DmyOL=1</param>  
                      <param>-Dmp.jwt.verify.publickey.location=http://acmeair-kabanero.apps.bph44c1.cp.fyre.ibm.com/auth/getJwk</param>                      
                      <param>-DcustomerClient/mp-rest/url=http://acmeair-kabanero.apps.bph44c1.cp.fyre.ibm.com/customer</param>                      
                      <param>-DflightClient/mp-rest/url=http://acmeair-kabanero.apps.bph44c1.cp.fyre.ibm.com/flight</param>                      
