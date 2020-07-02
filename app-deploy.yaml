@@ -12,13 +12,13 @@ spec:
   expose: true
   env:
   - name: USERNAME
-    value: admin
+    value: ibmadmin
   - name: PASSWORD
-    value: password
+    value: acmeairSVTinterns2020
   - name: MONGO_HOST
-    value: bphmongob.rtp.raleigh.ibm.com
+    value: acmeairmongovm.rtp.raleigh.ibm.com
   - name: JVM_ARGS
-    value: "-Dmp.jwt.verify.publickey.location=http://acmeair-kabanero.apps.svt43.os.fyre.ibm.com/auth/getJwk -DcustomerClient/mp-rest/url=http://acmeair-kabanero.apps.svt43.os.fyre.ibm.com/customer -DflightClient/mp-rest/url=http://acmeair-kabanero.apps.svt43.os.fyre.ibm.com/flight"
+    value: "-Dmp.jwt.verify.publickey.location=http://acmeair-acmeair.apps.acmeair44.cp.fyre.ibm.com/auth/getJwk -DcustomerClient/mp-rest/url=http://acmeair-acmeair.apps.acmeair44.cp.fyre.ibm.com/customer -DflightClient/mp-rest/url=http://acmeair-acmeair.apps.acmeair44.cp.fyre.ibm.com/flight"
   - name: TRACK_REWARD_MILES
     value: 'true'
   - name: SECURE_SERVICE_CALLS
