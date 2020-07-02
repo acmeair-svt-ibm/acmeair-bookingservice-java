@@ -5,7 +5,7 @@ metadata:
     image.opencontainers.org/title: stackaa-booking
     stack.appsody.dev/id: java-openliberty
   name: stackaa-booking
-  namespace: kabanero
+  namespace: acmeair
 spec:
   applicationImage: stackaa-booking 
   createKnativeService: false
