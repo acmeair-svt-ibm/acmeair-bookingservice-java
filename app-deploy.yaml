@@ -12,9 +12,9 @@ spec:
   expose: true
   env:
   - name: USERNAME
-    value: ibmadmin
+    value: admin
   - name: PASSWORD
-    value: acmeairSVTinterns2020
+    value: password
   - name: MONGO_HOST
     value: acmeairmongovm.rtp.raleigh.ibm.com
   - name: JVM_ARGS
