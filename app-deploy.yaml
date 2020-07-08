@@ -26,6 +26,9 @@ spec:
   service:
     type: NodePort
     port: 9080
+    provides:
+      category: openapi
+      context: /booking
     annotations:
       prometheus.io/scrape: 'true'
   readinessProbe:
