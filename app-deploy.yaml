@@ -89,8 +89,8 @@ spec:
     annotations:
       prometheus.io/scrape: "true"
     port: 9080
-    type: NodePort
     provides:
       category: openapi
       context: /booking
+    type: NodePort
   version: 1.0.0
