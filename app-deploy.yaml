@@ -86,13 +86,11 @@ spec:
     periodSeconds: 2
     timeoutSeconds: 1
   service:
-    type: NodePort
-    port: 9080
-    provides:
-      category: openapi
-      context: /booking
     annotations:
       prometheus.io/scrape: "true"
     port: 9080
     type: NodePort
+    provides:
+      category: openapi
+      context: /booking
   version: 1.0.0
