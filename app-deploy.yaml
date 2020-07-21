@@ -91,6 +91,15 @@ spec:
   service:
     annotations:
       prometheus.io/scrape: "true"
+    consumes:
+    - category: openapi
+      name: stackaa-customer
+      namespace: acmeair
+      mountPath: /acmeair
+    - category: openapi
+      name: stackaa-flight
+      namespace: acmeair
+      mountPath: /acmeair
     port: 9080
     provides:
       category: openapi
