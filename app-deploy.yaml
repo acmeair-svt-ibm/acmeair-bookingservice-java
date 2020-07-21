@@ -57,6 +57,9 @@ spec:
   applicationImage: stackaa-booking
   createKnativeService: false
   expose: true
+  route:
+    host: aa-acmeair.apps.acme42.cp.fyre.ibm.com
+    path: "/booking"
   env:
     - name: USERNAME
       value: admin
