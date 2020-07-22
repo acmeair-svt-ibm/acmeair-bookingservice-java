@@ -57,6 +57,9 @@ spec:
   applicationImage: stackaa-booking
   createKnativeService: false
   expose: true
+  route:
+    host: aa-acmeair.apps.acme42.cp.fyre.ibm.com
+    path: "/booking"
   env:
     - name: USERNAME
       value: admin
@@ -87,6 +90,10 @@ spec:
     annotations:
       prometheus.io/scrape: "true"
     consumes:
+    - category: openapi
+      name: stackaa-auth
+      namespace: acmeair
+      mountPath: /acmeair
     - category: openapi
       name: stackaa-customer
       namespace: acmeair
