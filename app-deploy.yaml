@@ -68,7 +68,7 @@ spec:
     - name: MONGO_HOST
       value: acmeairmongovmrh.rtp.raleigh.ibm.com
     - name: JVM_ARGS
-      value: "-Dmp.jwt.verify.publickey.location=http://stackaa-auth-acmeair.apps.acme42.cp.fyre.ibm.com/auth/getJwk -DcustomerClient/mp-rest/url=http://stackaa-customer-acmeair.apps.acme42.cp.fyre.ibm.com/customer -DflightClient/mp-rest/url=http://stackaa-flight-acmeair.apps.acme42.cp.fyre.ibm.com/flight"
+      value: "-Dmp.jwt.verify.publickey.location=http://aa-acmeair.apps.acme42.cp.fyre.ibm.com/auth/getJwk -DcustomerClient/mp-rest/url=http://aa-acmeair.apps.acme42.cp.fyre.ibm.com/customer -DflightClient/mp-rest/url=http://aa-acmeair.apps.acme42.cp.fyre.ibm.com/flight"
     - name: TRACK_REWARD_MILES
       value: 'true'
     - name: SECURE_SERVICE_CALLS
@@ -92,6 +92,10 @@ spec:
     annotations:
       prometheus.io/scrape: "true"
     consumes:
+    - category: openapi
+      name: stackaa-auth
+      namespace: acmeair
+      mountPath: /acmeair
     - category: openapi
       name: stackaa-customer
       namespace: acmeair
