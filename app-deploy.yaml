@@ -93,7 +93,6 @@ spec:
     - category: openapi
       name: stackaa-auth
       namespace: acmeair
-      mountPath: /acmeair
     - category: openapi
       name: stackaa-customer
       namespace: acmeair
