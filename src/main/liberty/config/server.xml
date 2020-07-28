@@ -16,7 +16,6 @@
     <classloader apiTypeVisibility="api,ibm-api,spec,stable,third-party"/>
   </webApplication>
 
-  <keyStore id="defaultKeyStore" password="secret"  />
   <keyStore id="defaultTrustStore" password="secret" />
 
   <cors domain="/booking"
